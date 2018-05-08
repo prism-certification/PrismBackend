@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/2.0/ref/settings/
 """
 
 import os
+import PrismWebsite.app_conf
+import PrismWebsite.db_conf
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -19,14 +21,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '8)=q(%-*qpte3#@^cd_6j@t0fhp)yydv5+1hg51+cr#6!+ez#d'
+SECRET_KEY = PrismWebsite.app_conf.SECRET_KEY
+DEBUG = PrismWebsite.app_conf.DEBUG
+ALLOWED_HOSTS = PrismWebsite.app_conf.ALLOWED_HOSTS
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
+DATABASES = PrismWebsite.db_conf.DATABASES
 
 # Application definition
 
