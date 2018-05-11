@@ -1,4 +1,4 @@
-# PrismWebsite
+# PrismBackend
 ```
 apt install libpq-dev
 pip3 install django
