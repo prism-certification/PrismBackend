@@ -16,6 +16,6 @@ class Company(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.id:
-            self.created = timezone.now()
-        self.modified = timezone.now()
+            self.created_at = timezone.now()
+        self.updated_at = timezone.now()
         return super(Company, self).save(*args, **kwargs)
